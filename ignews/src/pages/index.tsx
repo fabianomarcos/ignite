@@ -1,18 +1,26 @@
 import Head from "next/head";
-import GlobalStyle from "../styles/global";
-import HomePage from "../pages/home/home";
+
+import styles from "./home.module.scss";
 
 export default function Home() {
   return (
 	<>
 		<Head>
-			<title>Home</title>
+			<title>Home | Ig.news</title>
 		</Head>
 
+		<main className={styles.contentContainer}>
+			<section className={styles.hero}>
+				<span>👏 Olá, seja bem vindo!</span>
+				<h1>Noticias sobre o mundo <span>React</span>.</h1>
+				<p>
+					Tenha acesso a todas as publicações <br />
+					<span>por apenas $9,90 por mês.</span>
+				</p>
+			</section>
 
-
-		<HomePage />
-		<GlobalStyle />
+			<img src="/images/avatar.svg" alt="Girl coding" />
+		</main>
 	</>
   )
 }
