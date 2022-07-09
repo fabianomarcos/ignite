@@ -47,10 +47,10 @@ export const getStaticProps: GetStaticProps = async () => {
 		}).format(price.unit_amount/100)
 	}
 
+	const twentyFourHours = 60 * 60 * 24;
+
 	return {
-		props: {
-			product
-		},
-		revalidate: 60 * 60 * 24 // 24 hours
+		props: { product },
+		revalidate: twentyFourHours
 	}
 }
